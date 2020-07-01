@@ -1,0 +1,231 @@
+:root {
+  --mainColor: #f8af42;
+  --secondaryColor: #bd832b;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* START App block style */
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: var(--secondaryColor);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* END App block style */
+
+/* START loading style */
+.lds-dual-ring {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+}
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid black;
+  border-color: black transparent black transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* END loading style */
+
+/* START main blocks style */
+
+.wrapper {
+  width: 960px;
+  margin: 0 auto;
+}
+
+.main {
+  flex: 1;
+  background-color: var(--mainColor);
+}
+
+.footer {
+  background-color: var(--secondaryColor);
+  display: flex;
+  justify-content: center;
+}
+
+/* END main blocks style */
+
+/* START header block style */
+
+.mainHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+/* END header block style */
+.postBlock {
+	display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+	align-items: flex-start;
+	padding: 10px 20px;
+	border-radius: 4px;
+	background-color: #474539;
+}
+
+.postBlock:not(:first-child) {
+  margin-top: 1rem;
+}
+
+/* START create post form style */
+
+.createBlock {
+  margin: 1rem 0;
+  padding: 10px 20px;
+}
+
+.createFrom {
+  display: flex;
+  flex-direction: column;
+  padding-left: 1rem;
+}
+
+.createTextarea {
+  font-size: 3rem;
+  width: 80%;
+  padding: .5rem;
+  background: transparent;
+  border: none;
+  color: #024A68;
+  resize: none;
+}
+
+.createTextarea:focus {
+  outline: none;
+}
+
+/* END create post form style */
+
+/* START button style */
+
+.btn {
+  background-color: #5e69ab;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  padding: .5rem;
+  cursor: pointer;
+  color: #ffffff;
+}
+
+.btn:hover {
+  background-color: #27509e;
+}
+
+.btn:focus {
+  outline-color: aliceblue;
+}
+
+/* END button style */
+
+/* START option style */
+
+.option {
+  display: flex;
+  flex-direction: row;
+}
+
+/* END option style */
+
+/* START post block style */
+
+.postItem + .option {
+  margin-left: 1rem;
+}
+
+.optionItem + .optionItem {
+  margin-left: 1rem;
+}
+
+/* END post block style */
+
+/* START login block style */
+
+.loginBlock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+.loginBlock .wrapperButton {
+  margin-left: 20px;
+}
+.loginInput {
+  padding: .5rem 1.5rem;
+  font-size: 1.5rem;
+  background-color: transparent;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  box-shadow: inset 0 0 6px;
+}
+.loginLink {
+  text-decoration: none;
+}
+
+/* END login block style */
