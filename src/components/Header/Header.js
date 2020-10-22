@@ -7,11 +7,7 @@ export default function Header({ user, logOut }) {
 			<h1>
 				Hello, { user }
 			</h1>
-			<Button
-				type="button"
-				text="log out"
-				handlerClick={ logOut }
-			/>
+			<a href="/"	onClick={ logOut }> log out</a>
 		</header>
 	)
 }

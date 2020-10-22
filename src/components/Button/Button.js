@@ -1,7 +1,6 @@
 import React from 'react';
 
 export default function Button({text, handlerClick, type, classes }) {
-	console.log(handlerClick)
 	return(
 		<div className="wrapperButton">
 			<button
