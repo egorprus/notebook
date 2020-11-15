@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Main from './components/Main/Main';
 import Footer from './components/Footer/Footer';
 import Login from './components/Login/Login';
@@ -6,6 +6,7 @@ import Other from './components/Other/Other';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 export default function App() {
+  
   return (
     <Router>
       <div className="App">
@@ -18,10 +19,6 @@ export default function App() {
             <Route exact path="/posts" component={ Main } />
             <Route component={ Other } />
           </Switch>
-          {/* { login ?
-            <Main login={ login } logOut={ logOut } /> :
-            <Login />
-          } */}
         </main>
         <Footer />
       </div>
